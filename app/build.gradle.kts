@@ -1,3 +1,5 @@
+import java.util.Properties
+
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
@@ -31,6 +33,15 @@ android {
                 "proguard-rules.pro"
             )
         }
+
+        debug {
+            val properties = Properties()
+            properties.load(project.rootProject.file("local.properties").reader())
+            val publicKey: String = properties.getProperty("PUBLIC_KEY")
+            val privateKey: String = properties.getProperty("PRIVATE_KEY")
+            buildConfigField("String", "PUBLIC_KEY", publicKey)
+            buildConfigField("String", "PRIVATE_KEY", privateKey)
+        }
     }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
@@ -49,6 +60,9 @@ android {
         resources {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
         }
+    }
+    buildFeatures {
+        buildConfig = true
     }
 }
 

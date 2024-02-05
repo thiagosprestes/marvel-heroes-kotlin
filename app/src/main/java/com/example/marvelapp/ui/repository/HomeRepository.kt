@@ -1,5 +1,6 @@
 package com.example.marvelapp.ui.repository
 
+import com.example.marvelapp.BuildConfig
 import com.example.marvelapp.ResourceState
 import com.example.marvelapp.data.datasource.CharactersDataSource
 import com.example.marvelapp.data.entity.CharactersResponse
@@ -18,21 +19,23 @@ class HomeRepository @Inject constructor(
 //        return charactersDataSource.getCharacters()
 //    }
 
-    val timestamp = Timestamp(System.currentTimeMillis()).time.toString()
-    val API_KEY = ""
-    val PRIVATE_KEY = ""
+    private val timestamp = Timestamp(System.currentTimeMillis()).time.toString()
+    private val apiKey = BuildConfig.PUBLIC_KEY
+    private val privateKey = BuildConfig.PRIVATE_KEY
 
-    fun generateHash(): String {
-        val input = "$timestamp$PRIVATE_KEY$API_KEY"
+    private fun generateHash(): String {
+        val input = "$timestamp$privateKey$apiKey"
         val md5 = MessageDigest.getInstance("MD5")
-        return BigInteger(1, md5.digest(input.toByteArray())).toString(16).padStart(31, '0')
+        val md5ToBigInt = BigInteger(1, md5.digest(input.toByteArray()))
+
+        return md5ToBigInt.toString(16).padStart(31, '0')
     }
 
     suspend fun getCharacters(): Flow<ResourceState<CharactersResponse>> {
         return flow {
             emit(ResourceState.Loading())
             val response = charactersDataSource.getCharacters(
-                apikey = "",
+                apikey = apiKey,
                 ts = timestamp,
                 hash = generateHash()
             )

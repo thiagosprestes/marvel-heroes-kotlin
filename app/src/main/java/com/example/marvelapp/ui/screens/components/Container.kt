@@ -2,33 +2,26 @@ package com.example.marvelapp.ui.screens.components
 
 import android.util.Log
 import androidx.compose.foundation.Image
-import androidx.compose.foundation.background
+import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.layout.wrapContentSize
-import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
-import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.clip
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.marvelapp.R
 import com.example.marvelapp.ResourceState
 import com.example.marvelapp.data.entity.CharactersResponse
-import com.example.marvelapp.ui.components.FontSize
 import com.example.marvelapp.ui.components.Loader
 import com.example.marvelapp.ui.components.TextComponent
 import com.example.marvelapp.ui.screens.TAG
@@ -55,8 +48,7 @@ fun Container(
 
             is ResourceState.Error -> {
                 Log.d(
-                    TAG,
-                    "Error $charactersResponse"
+                    TAG, "Error $charactersResponse"
                 )
             }
 
@@ -73,6 +65,11 @@ fun Content() {
 ////        }
 //
 //    }
+    val imageSlider = listOf(
+        painterResource(id = R.drawable.ic_launcher_background),
+        painterResource(id = R.drawable.marvel_logo),
+    )
+
     Column(
     ) {
         Header()
@@ -84,12 +81,12 @@ fun Content() {
             ) {
                 TextComponent(
                     text = "Bem vindo ao Marvel Heroes",
-                    size = FontSize.HOME_SUBTITLE,
+                    fontStyle = MaterialTheme.typography.bodyMedium,
                     color = PrimaryGrey
                 )
                 TextComponent(
                     text = "Escolha o seu personagem",
-                    size = FontSize.HOME_TITLE,
+                    fontStyle = MaterialTheme.typography.titleMedium,
                     color = PrimaryBlack
                 )
             }
@@ -102,9 +99,26 @@ fun Content() {
                 ) {
                     CharactersTypeListItem(icon = R.drawable.hero, type = CharacterType.HERO)
                     CharactersTypeListItem(icon = R.drawable.villain, type = CharacterType.VILLAIN)
-                    CharactersTypeListItem(icon = R.drawable.antihero, type = CharacterType.ANTIHERO)
+                    CharactersTypeListItem(
+                        icon = R.drawable.antihero, type = CharacterType.ANTIHERO
+                    )
                     CharactersTypeListItem(icon = R.drawable.alien, type = CharacterType.ALIEN)
                     CharactersTypeListItem(icon = R.drawable.human, type = CharacterType.HUMAN)
+                }
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.SpaceBetween
+                ) {
+                    TextComponent(
+                        text = "Hérois",
+                        fontStyle = MaterialTheme.typography.headlineLarge,
+                        color = PrimaryRed
+                    )
+                    TextComponent(
+                        text = "Ver tudo",
+                        fontStyle = MaterialTheme.typography.headlineLarge,
+                        color = PrimaryGrey
+                    )
                 }
             }
         }
