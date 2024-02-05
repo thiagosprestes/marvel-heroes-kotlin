@@ -1,10 +1,9 @@
 package com.example.marvelapp.ui.viewmodel
 
-import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.marvelapp.ResourceState
-import com.example.marvelapp.data.entity.CharactersResponse
+import com.example.marvelapp.data.entity.Hero
 import com.example.marvelapp.ui.repository.HomeRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
@@ -18,18 +17,18 @@ import javax.inject.Inject
 class HomeViewModel @Inject constructor(
     private val homeRepository: HomeRepository
 ) : ViewModel() {
-    private val _characters: MutableStateFlow<ResourceState<CharactersResponse>> =
+    private val _heroes: MutableStateFlow<ResourceState<List<Hero>>> =
         MutableStateFlow(ResourceState.Loading())
-    val characters: StateFlow<ResourceState<CharactersResponse>> = _characters
+    val heroes: StateFlow<ResourceState<List<Hero>>> = _heroes
 
     init {
-        // getCharacters()
+        getHeroes()
     }
 
-    private fun getCharacters() {
+    private fun getHeroes() {
         viewModelScope.launch(Dispatchers.IO) {
-            homeRepository.getCharacters().collectLatest { response ->
-                _characters.value = response
+            homeRepository.getHeroes().collectLatest { response ->
+                _heroes.value = response
             }
         }
     }

@@ -1,11 +1,10 @@
 package com.example.marvelapp.di
 
-import com.example.marvelapp.AppConstants
+import com.example.marvelapp.BuildConfig
 import com.example.marvelapp.data.api.ApiService
-import com.example.marvelapp.data.datasource.CharactersDataSource
-import com.example.marvelapp.data.datasource.CharactersDataSourceImpl
+import com.example.marvelapp.data.datasource.HeroesDataSource
+import com.example.marvelapp.data.datasource.HeroesDataSourceImpl
 import com.example.marvelapp.ui.repository.HomeRepository
-import com.squareup.moshi.KotlinJsonAdapterFactory
 import com.squareup.moshi.Moshi
 import dagger.Module
 import dagger.Provides
@@ -41,7 +40,7 @@ class AppModule {
                 .build()
 
         return Retrofit.Builder()
-            .baseUrl(AppConstants.APP_BASE_URL)
+            .baseUrl(BuildConfig.BASE_URL)
             .client(httpClient.build())
             .addConverterFactory(MoshiConverterFactory.create(moshi))
             .build()
@@ -55,13 +54,13 @@ class AppModule {
 
     @Provides
     @Singleton
-    fun providesCharactersDataSource(apiService: ApiService): CharactersDataSource {
-        return CharactersDataSourceImpl(apiService)
+    fun providesCharactersDataSource(apiService: ApiService): HeroesDataSource {
+        return HeroesDataSourceImpl(apiService)
     }
 
     @Provides
     @Singleton
-    fun providesHomeRepository(homeDataSource: CharactersDataSource): HomeRepository {
+    fun providesHomeRepository(homeDataSource: HeroesDataSource): HomeRepository {
         return HomeRepository(homeDataSource)
     }
 }

@@ -13,10 +13,10 @@ const val TAG = "HomeScreen"
 fun HomeScreen(
     homeViewModel: HomeViewModel = hiltViewModel()
 ) {
-    val charactersResponse by homeViewModel.characters.collectAsState()
+    val heroesResponse by homeViewModel.heroes.collectAsState()
 
     Container(
-        charactersResponse = charactersResponse
+        heroesResponse = heroesResponse
     )
 }
 

@@ -1,10 +1,8 @@
-package com.example.marvelapp.data.api
+package com.example.marvelapp.data.datasource
 
 import com.example.marvelapp.data.entity.Hero
 import retrofit2.Response
-import retrofit2.http.GET
 
-interface ApiService {
-    @GET("heroes")
+interface HeroesDataSource {
     suspend fun getHeroes(): Response<List<Hero>>
 }

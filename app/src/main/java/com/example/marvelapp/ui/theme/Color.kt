@@ -14,6 +14,7 @@ val PrimaryRed = Color(0xFFF2264B)
 val PrimaryBlack = Color(0xFF000000)
 val PrimaryDark = Color(0xFF313140)
 val PrimaryGrey = Color(0xFFB7B7C8)
+val PrimaryWhite = Color(0xFFFFFFFF)
 
 val gradientBlue = listOf(Color(0xFF005BEA), Color(0xFF00C6FB))
 val gradientRed = listOf(Color(0xFFED1D24), Color(0xFFED1F69))

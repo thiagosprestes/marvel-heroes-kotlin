@@ -37,10 +37,10 @@ android {
         debug {
             val properties = Properties()
             properties.load(project.rootProject.file("local.properties").reader())
-            val publicKey: String = properties.getProperty("PUBLIC_KEY")
-            val privateKey: String = properties.getProperty("PRIVATE_KEY")
-            buildConfigField("String", "PUBLIC_KEY", publicKey)
-            buildConfigField("String", "PRIVATE_KEY", privateKey)
+
+            val baseUrl: String = properties.getProperty("BASE_URL")
+
+            buildConfigField("String", "BASE_URL", baseUrl)
         }
     }
     compileOptions {
@@ -95,6 +95,8 @@ dependencies {
 
     val coroutinesVersion = "1.7.3"
 
+    val coilVersion = "2.5.0"
+
     implementation("com.google.dagger:hilt-android:$hiltVersion")
     kapt("com.google.dagger:hilt-android-compiler:$hiltVersion")
 
@@ -111,6 +113,8 @@ dependencies {
 
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutinesVersion")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutinesVersion")
+
+    implementation("io.coil-kt:coil-compose:$coilVersion")
 }
 
 kapt {
