@@ -26,7 +26,7 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
 import com.example.marvelapp.BuildConfig
-import com.example.marvelapp.data.entity.Hero
+import com.example.marvelapp.data.entity.Character
 import com.example.marvelapp.ui.components.TextComponent
 import com.example.marvelapp.ui.theme.PrimaryBlack
 import com.example.marvelapp.ui.theme.PrimaryGrey
@@ -35,7 +35,7 @@ import com.example.marvelapp.ui.theme.PrimaryWhite
 
 @Composable
 fun CharactersSection(
-    characters: List<Hero>,
+    characters: List<Character>,
     title: String
 ) {
     Column {

@@ -17,11 +17,8 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.marvelapp.R
 import com.example.marvelapp.ResourceState
-import com.example.marvelapp.data.entity.Abilities
-import com.example.marvelapp.data.entity.Characteristics
-import com.example.marvelapp.data.entity.Height
-import com.example.marvelapp.data.entity.Hero
-import com.example.marvelapp.data.entity.Weight
+import com.example.marvelapp.data.entity.Character
+import com.example.marvelapp.data.entity.CharactersResponse
 import com.example.marvelapp.ui.components.Loader
 import com.example.marvelapp.ui.components.TextComponent
 import com.example.marvelapp.ui.screens.TAG
@@ -31,17 +28,17 @@ import com.example.marvelapp.ui.theme.PrimaryWhite
 
 @Composable
 fun Container(
-    heroesResponse: ResourceState<List<Hero>>?
+    characters: ResourceState<CharactersResponse>?
 ) {
     Surface {
-        when (heroesResponse) {
+        when (characters) {
             is ResourceState.Loading -> {
                 Log.d(TAG, "Loading")
                 Loader()
             }
 
             is ResourceState.Success -> {
-                val response = heroesResponse.data
+                val response = characters.data
                 Log.d(TAG, "Success $response")
 
                 Content(response = response)
@@ -49,7 +46,7 @@ fun Container(
 
             is ResourceState.Error -> {
                 Log.d(
-                    TAG, "Error $heroesResponse"
+                    TAG, "Error $characters"
                 )
             }
 
@@ -60,7 +57,7 @@ fun Container(
 
 @Composable
 fun Content(
-    response: List<Hero>
+    response: CharactersResponse
 ) {
     Column(
         modifier = Modifier
@@ -98,7 +95,11 @@ fun Content(
                 CharactersTypeListItem(icon = R.drawable.human, type = CharacterType.HUMAN)
             }
         }
-        CharactersSection(characters = response, title = "Hérois")
+        CharactersSection(characters = response.heroes, title = "Hérois")
+        CharactersSection(characters = response.villains, title = "Vilões")
+        CharactersSection(characters = response.antiheroes, title = "anti-hérois")
+        CharactersSection(characters = response.aliens, title = "Alienígenas")
+        CharactersSection(characters = response.humans, title = "Humanos")
     }
 }
 
@@ -106,32 +107,18 @@ fun Content(
 @Composable
 fun ContainerPreview() {
     Content(
-        response = listOf(
-            Hero(
-                name = "Homem Aranha",
-                alterEgo = "Peter Parker",
-                imagePath = "chars/spider-man.png",
-                biography = "Em Forest Hills, Queens, Nova York, o estudante de ensino médio, Peter Parker, é um cientista orfão que vive com seu tio Ben e tia May. Ele é mordido por uma aranha radioativa em uma exposição científica e adquire a agilidade e a força proporcional de um aracnídeo. Junto com a super força, Parker ganha a capacidade de andar nas paredes e tetos. Através de sua habilidade nativa para a ciência, ele desenvolve um aparelho que o permitir lançar teias artificiais. Inicialmente buscando capitalizar suas novas habilidades, Parker cria um traje e, como Homem Aranha, torna-se uma estrela de televisão.",
-                caracteristics = Characteristics(
-                    weight = Weight(
-                        value = 78, unity = "kg"
-                    ),
-                    birth = "1990",
-                    height = Height(value = "1.8", "meters"),
-                    universe = "Terra 616"
-                ),
-                abilities = Abilities(
-                    force = 70, intelligence = 65, agility = 90, endurance = 60, velocity = 80
-                ),
-                movies = arrayOf(
-                    "movies/captain-america-3.jpg",
-                    "movies/spider-man-homecoming.jpg",
-                    "movies/avengers-3.jpg",
-                    "movies/avengers-4.jpg",
-                    "movies/spider-man-far-from-home.jpg"
-                ),
-                id = "a556"
-            )
+        response = CharactersResponse(
+            heroes = listOf(
+                Character(
+                    name = "Homem Aranha",
+                    alterEgo = "Peter Parker",
+                    imagePath = "chars/spider-man.png",
+                )
+            ),
+            villains = emptyList(),
+            aliens = emptyList(),
+            antiheroes = emptyList(),
+            humans = emptyList()
         )
     )
 }

@@ -91,7 +91,6 @@ dependencies {
 
     val okhttpVersion = "4.12.0"
 
-    val moshiVersion = "1.15.0"
 
     val coroutinesVersion = "1.7.3"
 
@@ -104,12 +103,9 @@ dependencies {
 
     implementation("com.squareup.retrofit2:retrofit:$retrofitVersion")
     implementation("com.squareup.retrofit2:converter-gson:$retrofitVersion")
-    implementation("com.squareup.retrofit2:converter-moshi:$retrofitVersion")
 
     implementation("com.squareup.okhttp3:okhttp:$okhttpVersion")
     implementation("com.squareup.okhttp3:logging-interceptor:$okhttpVersion")
-
-    implementation("com.squareup.moshi:moshi-kotlin:$moshiVersion")
 
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutinesVersion")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutinesVersion")
