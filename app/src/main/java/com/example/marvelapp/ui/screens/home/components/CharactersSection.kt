@@ -1,6 +1,7 @@
-package com.example.marvelapp.ui.screens.components
+package com.example.marvelapp.ui.screens.home.components
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -24,6 +25,7 @@ import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
 import coil.compose.AsyncImage
 import com.example.marvelapp.BuildConfig
 import com.example.marvelapp.data.entity.Character
@@ -36,7 +38,8 @@ import com.example.marvelapp.ui.theme.PrimaryWhite
 @Composable
 fun CharactersSection(
     characters: List<Character>,
-    title: String
+    title: String,
+    navHostController: NavController
 ) {
     Column {
         Row(
@@ -76,6 +79,9 @@ fun CharactersSection(
                         )
                         .width(140.dp)
                         .height(230.dp)
+                        .clickable {
+                            navHostController.navigate("CHARACTER/${item.id}/${item.type}")
+                        }
                 ) {
                     Box(
                         modifier = Modifier.fillMaxSize(),

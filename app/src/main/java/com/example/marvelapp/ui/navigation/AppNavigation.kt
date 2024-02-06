@@ -4,7 +4,8 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.example.marvelapp.ui.screens.HomeScreen
+import com.example.marvelapp.ui.screens.character.CharacterScreen
+import com.example.marvelapp.ui.screens.home.HomeScreen
 
 @Composable
 fun AppNavigationGraph() {
@@ -12,7 +13,13 @@ fun AppNavigationGraph() {
 
     NavHost(navController = navController, startDestination = Routes.HOME_SCREEN) {
         composable(Routes.HOME_SCREEN) {
-            HomeScreen()
+            HomeScreen(navController = navController)
+        }
+        composable(Routes.CHARACTER_SCREEN) { item ->
+            val id = item.arguments?.getString("id")
+            val type = item.arguments?.getString("type")
+
+            CharacterScreen(id = id!!, type = type!!)
         }
     }
 }

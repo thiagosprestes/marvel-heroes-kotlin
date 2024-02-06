@@ -1,4 +1,4 @@
-package com.example.marvelapp.ui.screens.components
+package com.example.marvelapp.ui.screens.home.components
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -14,15 +14,13 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.marvelapp.R
+import com.example.marvelapp.data.entity.CharacterType
 import com.example.marvelapp.ui.theme.gradientBlue
 import com.example.marvelapp.ui.theme.gradientGreen
 import com.example.marvelapp.ui.theme.gradientPink
 import com.example.marvelapp.ui.theme.gradientPurple
 import com.example.marvelapp.ui.theme.gradientRed
 
-enum class CharacterType {
-    HERO, VILLAIN, ANTIHERO, ALIEN, HUMAN
-}
 
 @Composable
 fun CharactersTypeListItem(

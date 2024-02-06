@@ -4,7 +4,7 @@ import com.example.marvelapp.BuildConfig
 import com.example.marvelapp.data.api.ApiService
 import com.example.marvelapp.data.datasource.CharactersDataSource
 import com.example.marvelapp.data.datasource.CharactersDataSourceImpl
-import com.example.marvelapp.ui.repository.HomeRepository
+import com.example.marvelapp.ui.repository.CharactersRepository
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -55,7 +55,7 @@ class AppModule {
 
     @Provides
     @Singleton
-    fun providesHomeRepository(homeDataSource: CharactersDataSource): HomeRepository {
-        return HomeRepository(homeDataSource)
+    fun providesHomeRepository(homeDataSource: CharactersDataSource): CharactersRepository {
+        return CharactersRepository(homeDataSource)
     }
 }

@@ -1,4 +1,4 @@
-package com.example.marvelapp.ui.screens.components
+package com.example.marvelapp.ui.screens.home.components
 
 import android.util.Log
 import androidx.compose.foundation.background
@@ -15,20 +15,23 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
 import com.example.marvelapp.R
 import com.example.marvelapp.ResourceState
 import com.example.marvelapp.data.entity.Character
+import com.example.marvelapp.data.entity.CharacterType
 import com.example.marvelapp.data.entity.CharactersResponse
 import com.example.marvelapp.ui.components.Loader
 import com.example.marvelapp.ui.components.TextComponent
-import com.example.marvelapp.ui.screens.TAG
+import com.example.marvelapp.ui.screens.home.TAG
 import com.example.marvelapp.ui.theme.PrimaryBlack
 import com.example.marvelapp.ui.theme.PrimaryGrey
 import com.example.marvelapp.ui.theme.PrimaryWhite
 
 @Composable
 fun Container(
-    characters: ResourceState<CharactersResponse>?
+    characters: ResourceState<CharactersResponse>?,
+    navController: NavController
 ) {
     Surface {
         when (characters) {
@@ -41,7 +44,7 @@ fun Container(
                 val response = characters.data
                 Log.d(TAG, "Success $response")
 
-                Content(response = response)
+                Content(response = response, navController = navController)
             }
 
             is ResourceState.Error -> {
@@ -57,7 +60,8 @@ fun Container(
 
 @Composable
 fun Content(
-    response: CharactersResponse
+    response: CharactersResponse,
+    navController: NavController?
 ) {
     Column(
         modifier = Modifier
@@ -95,11 +99,15 @@ fun Content(
                 CharactersTypeListItem(icon = R.drawable.human, type = CharacterType.HUMAN)
             }
         }
-        CharactersSection(characters = response.heroes, title = "Hérois")
-        CharactersSection(characters = response.villains, title = "Vilões")
-        CharactersSection(characters = response.antiheroes, title = "anti-hérois")
-        CharactersSection(characters = response.aliens, title = "Alienígenas")
-        CharactersSection(characters = response.humans, title = "Humanos")
+        CharactersSection(
+            characters = response.heroes,
+            title = "Hérois",
+            navHostController = navController!!
+        )
+//        CharactersSection(characters = response.villains, title = "Vilões")
+//        CharactersSection(characters = response.antiheroes, title = "anti-hérois")
+//        CharactersSection(characters = response.aliens, title = "Alienígenas")
+//        CharactersSection(characters = response.humans, title = "Humanos")
     }
 }
 
@@ -113,12 +121,15 @@ fun ContainerPreview() {
                     name = "Homem Aranha",
                     alterEgo = "Peter Parker",
                     imagePath = "chars/spider-man.png",
+                    id = "12345",
+                    type = CharacterType.HERO
                 )
             ),
             villains = emptyList(),
             aliens = emptyList(),
             antiheroes = emptyList(),
             humans = emptyList()
-        )
+        ),
+        navController = null
     )
 }
