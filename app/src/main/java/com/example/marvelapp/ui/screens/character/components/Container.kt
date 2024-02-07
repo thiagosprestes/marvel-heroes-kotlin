@@ -23,9 +23,11 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
+import coil.request.ImageRequest
 import com.example.marvelapp.BuildConfig
 import com.example.marvelapp.ResourceState
 import com.example.marvelapp.data.entity.Abilities
@@ -83,11 +85,17 @@ fun Content(
                 contentAlignment = Alignment.BottomStart
             ) {
                 AsyncImage(
-                    model = "${BuildConfig.BASE_URL}/${character.imagePath}",
+                    model = ImageRequest.Builder(LocalContext.current)
+                        .data(
+                            "${BuildConfig.BASE_URL}/${character.imagePath}"
+                        )
+                        .crossfade(true)
+                        .build(),
                     contentDescription = null,
                     modifier = Modifier.fillMaxSize(),
-                    contentScale = ContentScale.Crop
-                )
+                    contentScale = ContentScale.Crop,
+
+                    )
                 Box(
                     Modifier
                         .fillMaxSize()

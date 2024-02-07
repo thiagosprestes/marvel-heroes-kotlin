@@ -24,9 +24,11 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import coil.compose.AsyncImage
+import coil.request.ImageRequest
 import com.example.marvelapp.BuildConfig
 import com.example.marvelapp.data.entity.Character
 import com.example.marvelapp.ui.components.TextComponent
@@ -37,9 +39,7 @@ import com.example.marvelapp.ui.theme.PrimaryWhite
 
 @Composable
 fun CharactersSection(
-    characters: List<Character>,
-    title: String,
-    navHostController: NavController
+    characters: List<Character>, title: String, navHostController: NavController
 ) {
     Column {
         Row(
@@ -62,34 +62,30 @@ fun CharactersSection(
         }
         LazyRow(
             contentPadding = PaddingValues(
-                start = 24.dp,
-                top = 16.dp,
-                end = 8.dp,
-                bottom = 48.dp
+                start = 24.dp, top = 16.dp, end = 8.dp, bottom = 48.dp
             ), modifier = Modifier.fillMaxWidth()
         ) {
             items(characters.toList()) { item ->
-                Row(
-                    modifier = Modifier
-                        .padding(
-                            start = 0.dp,
-                            top = 0.dp,
-                            end = 16.dp,
-                            bottom = 0.dp,
-                        )
-                        .width(140.dp)
-                        .height(230.dp)
-                        .clickable {
-                            println("TESTE ${item.type}")
-                            navHostController.navigate("CHARACTER/${item.id}/${item.type}")
-                        }
-                ) {
+                Row(modifier = Modifier
+                    .padding(
+                        start = 0.dp,
+                        top = 0.dp,
+                        end = 16.dp,
+                        bottom = 0.dp,
+                    )
+                    .width(140.dp)
+                    .height(230.dp)
+                    .clickable {
+                        println("TESTE ${item.type}")
+                        navHostController.navigate("CHARACTER/${item.id}/${item.type}")
+                    }) {
                     Box(
-                        modifier = Modifier.fillMaxSize(),
-                        contentAlignment = Alignment.BottomStart
+                        modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.BottomStart
                     ) {
                         AsyncImage(
-                            model = "${BuildConfig.BASE_URL}${item.imagePath}",
+                            ImageRequest.Builder(LocalContext.current).data(
+                                    "${BuildConfig.BASE_URL}/${item.imagePath}"
+                                ).crossfade(true).build(),
                             modifier = Modifier
                                 .fillMaxSize()
                                 .clip(RoundedCornerShape(16.dp)),
@@ -104,10 +100,8 @@ fun CharactersSection(
                                         listOf(Color.Transparent, PrimaryBlack),
                                         0f,
                                         300f,
-                                    ),
-                                    shape = RoundedCornerShape(
-                                        bottomStart = 16.dp,
-                                        bottomEnd = 16.dp
+                                    ), shape = RoundedCornerShape(
+                                        bottomStart = 16.dp, bottomEnd = 16.dp
                                     )
                                 )
                         )
