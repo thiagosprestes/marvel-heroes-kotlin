@@ -16,7 +16,7 @@ fun AppNavigationGraph() {
             HomeScreen(navController = navController)
         }
         composable(Routes.CHARACTER_SCREEN) {
-            CharacterScreen()
+            CharacterScreen(navController = navController)
         }
     }
 }

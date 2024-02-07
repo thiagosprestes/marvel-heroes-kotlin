@@ -15,7 +15,6 @@ class CharactersDataSourceImpl @Inject constructor(
     }
 
     override suspend fun getCharacter(id: String, type: String): Response<Character> {
-        println(type)
         val parsedType: String = when (type) {
             CharacterType.HERO.toString() -> "heroes"
             CharacterType.VILLAIN.toString() -> "villains"

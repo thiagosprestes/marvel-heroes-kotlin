@@ -9,12 +9,14 @@ import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.platform.LocalView
 import androidx.core.view.WindowCompat
 import androidx.hilt.navigation.compose.hiltViewModel
+import androidx.navigation.NavController
 import com.example.marvelapp.ui.screens.character.components.Container
 import com.example.marvelapp.ui.viewmodel.CharacterViewModel
 
 @Composable
 fun CharacterScreen(
-    characterViewModel: CharacterViewModel = hiltViewModel()
+    characterViewModel: CharacterViewModel = hiltViewModel(),
+    navController: NavController
 ) {
     val view = LocalView.current
 
@@ -24,5 +26,5 @@ fun CharacterScreen(
 
     val character by characterViewModel.character.collectAsState()
 
-    Container(character = character)
+    Container(character = character, navController = navController)
 }

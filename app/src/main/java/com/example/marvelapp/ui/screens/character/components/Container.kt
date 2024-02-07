@@ -26,6 +26,7 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
 import coil.compose.AsyncImage
 import coil.request.ImageRequest
 import com.example.marvelapp.BuildConfig
@@ -44,7 +45,7 @@ import com.example.marvelapp.ui.theme.PrimaryDark
 import com.example.marvelapp.ui.theme.PrimaryWhite
 
 @Composable
-fun Container(character: ResourceState<Character>) {
+fun Container(character: ResourceState<Character>, navController: NavController) {
     Surface(modifier = Modifier.background(PrimaryDark)) {
         when (character) {
             is ResourceState.Loading -> {
@@ -55,7 +56,7 @@ fun Container(character: ResourceState<Character>) {
             is ResourceState.Success -> {
                 val response = character.data
                 Log.d(TAG, "Success ${response.name}")
-                Content(character = character.data)
+                Content(character = character.data, navController=navController)
             }
 
             is ResourceState.Error -> {
@@ -69,7 +70,8 @@ fun Container(character: ResourceState<Character>) {
 
 @Composable
 fun Content(
-    character: Character
+    character: Character,
+    navController: NavController?
 ) {
     Column(
         modifier = Modifier
@@ -163,7 +165,9 @@ fun Content(
     }
     Box {
         Row {
-            IconButton(onClick = {}) {
+            IconButton(onClick = {
+                navController?.popBackStack()
+            }) {
                 Icon(Icons.Filled.ArrowBack, contentDescription = null, tint = PrimaryWhite)
             }
         }
@@ -195,6 +199,7 @@ fun ContentPreview() {
                 height = Height(value = 1.8.toString(), unity = "meters"),
                 universe = "Terra 616"
             ),
-        )
+        ),
+        navController = null
     )
 }

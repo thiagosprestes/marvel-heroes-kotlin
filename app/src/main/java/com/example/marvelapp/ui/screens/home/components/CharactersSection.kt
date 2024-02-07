@@ -76,7 +76,6 @@ fun CharactersSection(
                     .width(140.dp)
                     .height(230.dp)
                     .clickable {
-                        println("TESTE ${item.type}")
                         navHostController.navigate("CHARACTER/${item.id}/${item.type}")
                     }) {
                     Box(
