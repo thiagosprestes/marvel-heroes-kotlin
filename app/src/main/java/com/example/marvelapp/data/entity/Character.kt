@@ -20,5 +20,9 @@ data class Character(
     val alterEgo: String,
     val imagePath: String,
     val id: String,
-    val type: CharacterType
+    val type: CharacterType,
+    val biography: String? = null,
+    val caracteristics: Characteristics? = null,
+    val abilities: Abilities? = null,
+    val movies: Array<String>? = null
 )
