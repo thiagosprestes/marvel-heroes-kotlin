@@ -24,7 +24,11 @@ Marvel Heroes App
 
 ## 🎨 Telas
 
-<img src="marvel-heroes-app.gif" alt="marvel-heroes-app">
+<img src=".github/home.png" alt="marvel-heroes-app" width-="500" height="500">
+<img src=".github/home-slide.png" alt="marvel-heroes-app" width-="500" height="500">
+<img src=".github/character.png" alt="marvel-heroes-app" width-="500" height="500">
+<img src=".github/character-abilities.png" alt="marvel-heroes-app" width-="500" height="500">
+<img src=".github/character-movies.png" alt="marvel-heroes-app" width-="500" height="500">
 
 ## 📃 Sobre o projeto
 
@@ -89,7 +93,3 @@ npx json-server application.json --host SEU_ENDEREÇO_DE_IP -p 3333
   </li>
   <li>Rode o app</li>
 </ol>
-
-
-
-
