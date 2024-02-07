@@ -79,8 +79,15 @@ npx json-server application.json --host SEU_ENDEREÇO_DE_IP -p 3333
 
 ### 📱 Rodando o aplicativo mobile
 
-1 - Abra a pasta raiz do projeto no Android Studio
-2 - Localize o arquivo `local.properties`
-3 - Adicione a seguinte linha:
-`BASE_URL="http://SEU_ENDEREÇO_DE_IP:3333/"`
-4 - Rode o app
+<ol>
+  <li>Abra a pasta raiz do projeto no Android Studio</li>
+  <li>Localize o arquivo `local.properties`</li>
+  <li>Adicione a seguinte linha:
+  BASE_URL="http://SEU_ENDEREÇO_DE_IP:3333/"
+  </li>
+  <li>Rode o app</li>
+</ol>
+
+
+
+
