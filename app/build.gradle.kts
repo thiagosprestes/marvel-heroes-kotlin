@@ -91,7 +91,6 @@ dependencies {
 
     val okhttpVersion = "4.12.0"
 
-
     val coroutinesVersion = "1.7.3"
 
     val coilVersion = "2.5.0"

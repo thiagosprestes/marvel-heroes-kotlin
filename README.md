@@ -1,6 +1,6 @@
 <h1 align="center">
 <br>
-  <img src="logo.png" width="auto" height="70" alt="marvel-heroes-app">
+  <img src=".github/logo.png" width="auto" height="70" alt="marvel-heroes-app">
 <br>
 <br>
 Marvel Heroes App
@@ -9,7 +9,7 @@ Marvel Heroes App
 <p align="center">Aplicativo simples que lista personagens da Marvel e suas informações como biografia, níveis de habilidade e participações em filmes.</p>
 
 <div>
-  <img src="cover.png" alt="marvel-heroes-app">
+  <img src=".github/cover.png" alt="marvel-heroes-app">
 </div>
 
 # 📋 Índice
@@ -32,18 +32,22 @@ Aplicativo proposto como desafio pela <a href="https://umpontoseis.com/" target=
 
 ## 🛠 Tecnologias utilizadas
 
-- ⚛️ **React native** — Aplicativo mobile
-- 📱 **React native linear gradient** — Efeito de gradient nas imagens
+- K **Kotlin** — Aplicativo mobile
+- 📱 **Jetpack compose** — UI
+- 📡 **Retrofit** — Chamadaas para a API
+- 💉 **Hilt** — Injeção de dependência
+- 🛳️ **HilNavCompose** — Navegação
+- 🕛 **Coroutines** — Chamadas assincronas
+- 🖼️ **Coil** — Carregamento e manipulação de imagens vindas da API
 
 ## 🚀 Rodando o projeto
-
-A aplicação é dividida em duas partes, mobile e server, o aplicativo mobile precisa que o server esteja sendo executado para funcionar.
 
 ### Pré-requisitos
 
 - Git
 - NodeJS
-- Setup React Native CLI
+
+Antes de rodarmos o app precisamos rodar o contéudo da pasta server, é uma pasta com estrutura simples onde estão concentrados os arquivos responsáveis por simular uma API com JSON Server
 
 ### 💻 Rodando o server
 
@@ -52,7 +56,7 @@ Clone o repositório
 ```bash
 
 # Clona o repositório
-git clone https://github.com/thiagosprestes/Marvel-heroes-app.git
+git clone https://github.com/thiagosprestes/Marvel-heroes-kotlin.git
 
 ```
 
@@ -75,36 +79,8 @@ npx json-server application.json --host SEU_ENDEREÇO_DE_IP -p 3333
 
 ### 📱 Rodando o aplicativo mobile
 
-Caso já tenha clonado o repositório basta pular a primeira etapa
-
-```bash
-
-# Clona o repositório
-git clone https://github.com/thiagosprestes/Marvel-heroes-app.git
-
-```
-
-Navegue até a pasta do projeto clonado e execute os comandos abaixo
-
-```bash
-
-# Entra na pasta do aplicativo
-cd mobile
-
-# Instala as dependências
-npm install
-
-```
-Após concluir a instalação das dependências, dentro da pasta mobile renomeie o arquivo chamado ```.env-example``` para ```.env```, após isso abra o arquivo e troque o endereço ```http://0.0.0.0./3333/``` pelo endereço de IP do seu computador, o mesmo utilizado para executar o server.
-
-Após isso, no terminal da pasta mobile execute o comando abaixo
-
-```bash
-
-# Inicia o aplicativo no Android
-yarn android
-
-# Inicia o aplicativo no iOS
-yarn ios
-
-```
+1 - Abra a pasta raiz do projeto no Android Studio
+2 - Localize o arquivo `local.properties`
+3 - Adicione a seguinte linha:
+`BASE_URL="http://SEU_ENDEREÇO_DE_IP:3333/"`
+4 - Rode o app
