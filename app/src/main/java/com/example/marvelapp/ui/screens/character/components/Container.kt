@@ -71,9 +71,6 @@ fun Container(character: ResourceState<Character>) {
 fun Content(
     character: Character
 ) {
-    val calendar = Calendar.getInstance()
-    val fullYear = calendar.get(Calendar.YEAR)
-
     Column(
         modifier = Modifier
             .verticalScroll(rememberScrollState())
@@ -120,7 +117,7 @@ fun Content(
                         color = PrimaryWhite,
                     )
                     CharacterInfo(
-                        age = fullYear - character.caracteristics?.birth?.toInt()!!,
+                        birth = character.caracteristics?.birth?.toInt()!!,
                         weight = character.caracteristics.weight.value,
                         height = character.caracteristics.height.value,
                         universe = character.caracteristics.universe
@@ -156,7 +153,7 @@ fun Content(
             modifier = Modifier.padding(start = 0.dp, top = 0.dp, end = 0.dp, bottom = 48.dp)
         ) {
             TextComponent(
-                text = "Filmes",
+                text = "Filmes e séries",
                 fontStyle = MaterialTheme.typography.headlineLarge,
                 color = PrimaryWhite,
                 modifier = Modifier.padding(horizontal = 24.dp)

@@ -1,5 +1,6 @@
 package com.example.marvelapp.ui.screens.character.components
 
+import android.icu.util.Calendar
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -18,11 +19,20 @@ import com.example.marvelapp.ui.theme.PrimaryWhite
 
 @Composable
 fun CharacterInfo(
-    age: Int,
+    birth: Int,
     weight: Int,
     height: String,
     universe: String
 ) {
+    val calendar = Calendar.getInstance()
+    val fullYear = calendar.get(Calendar.YEAR)
+
+    val age = fullYear - birth
+
+    val unknownAge = age == fullYear
+
+    val ageLabel = if(unknownAge) "????" else "$age anos"
+
     Row(
         modifier = Modifier
             .padding(
@@ -48,7 +58,7 @@ fun CharacterInfo(
                 )
             )
             TextComponent(
-                text = "$age anos",
+                text = "$ageLabel",
                 fontStyle = MaterialTheme.typography.labelLarge,
                 color = PrimaryWhite
             )

@@ -119,11 +119,6 @@ fun Content(
             title = "Alienígenas",
             navHostController = navController
         )
-        CharactersSection(
-            characters = response.humans,
-            title = "Humanos",
-            navHostController = navController
-        )
     }
 }
 
