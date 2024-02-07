@@ -1,0 +1,524 @@
+{
+	"heroes": [
+		{
+			"id": "1",
+			"name": "Homem Aranha",
+			"alterEgo": "Peter Parker",
+			"imagePath": "chars/spider-man.jpeg",
+			"biography": "Peter Benjamin Parker é um ex-aluno do ensino médio que adquiriu habilidades de aranha, combatendo o crime em Nova York como o super-herói Homem-Aranha. Enquanto Parker fazia malabarismos com todos os seus contínuos deveres de herói com as exigências de sua vida de colegial, ele foi abordado por Tony Stark que recrutou o Homem-Aranha para se juntar à Guerra Civil dos Vingadores, colocando o Homem-Aranha no breve conflito com seu herói pessoal, o Capitão América. Parker recebeu um novo traje assim como uma nova tecnologia Stark em troca de sua ajuda, permitindo que ele voltasse para casa para continuar seu próprio trabalho de herói.",
+			"caracteristics": {
+				"birth": "2002",
+				"weight": {
+					"value": 78,
+					"unity": "kg"
+				},
+				"height": {
+					"value": 1.80,
+					"unity": "meters"
+				},
+				"universe": "Terra 616"
+			},
+			"abilities": {
+				"force": 70,
+				"intelligence": 65,
+				"agility": 90,
+				"endurance": 60,
+				"velocity": 80
+			},
+			"movies": [
+				"movies/captain-america-3.jpg",
+				"movies/spider-man-homecoming.jpg",
+				"movies/avengers-3.jpg",
+				"movies/avengers-4.jpg",
+				"movies/spider-man-far-from-home.jpg",
+				"movies/spider-man-no-way-home.jpg"
+			],
+			"type": "hero"
+		},
+		{
+			"id": "2",
+			"name": "Capitão América",
+			"alterEgo": "Sam Wilson",
+			"imagePath": "chars/captain-america.jpeg",
+			"biography": "Samuel Thomas Wilson, é um ex aviador do Exército, que largou sua carreira após a morte de Riley, seu amigo de longa data. Após sua saída, passou a trabalhar com ex militares que sofriam de estresse pós traumático. Conheceu Steve Rogers em uma corrida matinal, e logo se tornaram amigos, pois Rogers precisava de alguém que não pertencesse a SHIELD, pois haviam infiltrados da HYDRA, ali dentro. Em O Falcão e O Soldado Invernal, Bucky e Sam tem que trabalhar juntos para impedir os Apátridas de matarem pessoas do governo. Inicialmente o escudo é entregue a John Walker, que por um breve tempo é chamado de Capitão América. Após a morte de um Apátrida em praça pública, Walker é destituído do cargo de Capitão América; com isso Wilson toma posse do escudo e do título de Capitão América.",
+			"caracteristics": {
+				"birth": "1980",
+				"weight": {
+					"value": 91,
+					"unity": "kg"
+				},
+				"height": {
+					"value": 1.83,
+					"unity": "meters"
+				},
+				"universe": "Terra 616"
+			},
+			"abilities": {
+				"force": 70,
+				"intelligence": 80,
+				"agility": 75,
+				"endurance": 80,
+				"velocity": 90
+			},
+			"movies": [
+				"movies/captain-america-2.jpg",
+				"movies/avengers-2.jpg",
+				"movies/ant-man.jpg",
+				"movies/captain-america-3.jpg",
+				"movies/avengers-3.jpg",
+				"movies/avengers-4.jpg",
+				"series/falcon-and-winter-soldier.jpg"
+			],
+			"type": "hero"
+		},
+		{
+			"id": "3",
+			"name": "Doutor Estranho",
+			"alterEgo": "Steven Strange",
+			"imagePath": "chars/doctor-strange.jpg",
+			"biography": "Stephen Vincent Strange M.D., Ph.D é um poderosos feiticeiro e mestre das artes místicas. Anteriormente um brilhante, mas arrogante, neurocirurgião, Strange sofreu um acidente de caro, fazendo com que sua mãos fossem severamente danificadas. Quando a medicina ocidental falhou com ele, Strange embarcou em uma jornada que o levou até Kamar-Taj, onde Strange descobriu a magia e as dimensões alternativas sendo treinado pela Anciã. Embora focado em curar suas mãos, Strange aprendeu mais sobre as artes místicas e ajudou os Mestres a evitar que Kaecilius fundisse a Terra com sua Dimensão Sombria, mas não antes de testemunhar a morte da Anciã. Sem sua mentora, Strange tornou-se o protetor do Sanctum de Nova York na cidade de Nova York, assim como o protetor da Terra contra quaisquer ameaças interdimensionais.",
+			"caracteristics": {
+				"birth": "1980",
+				"weight": {
+					"value": 85,
+					"unity": "kg"
+				},
+				"height": {
+					"value": 1.85,
+					"unity": "meters"
+				},
+				"universe": "Terra 616"
+			},
+			"abilities": {
+				"force": 90,
+				"intelligence": 90,
+				"agility": 70,
+				"endurance": 50,
+				"velocity": 75
+			},
+			"movies": [
+				"movies/doctor-strange-1.jpeg",
+				"movies/thor-3.jpg",
+				"movies/avengers-3.jpg",
+				"movies/avengers-4.jpg",
+				"movies/spider-man-no-way-home.jpg",
+				"movies/doctor-strange-2.jpeg"
+			],
+			"type": "hero"
+		}
+	],
+	"villains": [
+		{
+			"id": "4",
+			"name": "Rei do crime",
+			"alterEgo": "Wilson Fisk",
+			"imagePath": "chars/king-pin.jpeg",
+			"biography": "Wilson Grant Fisk é um poderoso empresário e senhor do crime com interesse em controlar a cidade de Nova York. Décadas depois de assassinar seu pai abusivo quando era criança, Fisk formou alianças com outras empresas criminosas, aproveitou as consequências da Batalha de Nova York para ganhar poder na cidade e tentou reconstruir Hell's Kitchen destruindo-a e gentrificando-a. Suas atividades criminosas o colocaram em conflito com o Demolidor, bem como com alguns de seus parceiros que o traíram, e ele foi preso depois que suas ações vazaram para o FBI. Na Ilha de Ryker, Fisk começou a conquistar seguidores e passou a administrar a prisão. Buscando destruir a competição do crime em Nova York quando ele se libertasse, Fisk ajudou na fuga do Justiceiro, pois desejava eliminar todos os impérios criminosos concorrentes como o Rei do Crime, colocando-o em conflito com Nelson e Murdock, que tentaram mandá-lo para prisão.",
+			"caracteristics": {
+				"birth": "1972",
+				"weight": {
+					"value": 200,
+					"unity": "kg"
+				},
+				"height": {
+					"value": 2.10,
+					"unity": "meters"
+				},
+				"universe": "Terra 616"
+			},
+			"abilities": {
+				"force": 95,
+				"intelligence": 85,
+				"agility": 50,
+				"endurance": 90,
+				"velocity": 50
+			},
+			"movies": [
+				"series/hawkeye.jpg",
+				"series/echo.jpg"
+			],
+			"type": "villain"
+		},
+		{
+			"id": "5",
+			"name": "Agatha Harkness",
+			"alterEgo": "Agnes",
+			"imagePath": "chars/agatha-harkness.jpeg",
+			"biography": "Agatha Harkness é uma bruxa que vive em Westview sobre o nome de Agnes, a vizinha de Wanda Maximoff e Visão. Agatha, sobre o disfarce de Agnes, foi uma das primeiras vizinhas de Wanda Maximoff a lhe dar boas-vindas depois que ela e Visão se mudaram para Westview como um casal recém-casado. Ela usou seus poderes para transformar sua roupa[1] e em seguida foi até a porta da residência de Wanda. Depois que Wanda se apresentou, Agnes notou o como ela havia arrumado sua casa tão rápido, perguntando a ela como havia feito isso. Wanda mentiu dizendo que havia usado um serviço de mudança. Wanda disse que ela estava se preparando para uma ocasião especial (na qual ela não se lembra), e afirmou a pergunta de Agnes, dizendo que era o aniversário dela e Visão. Agnes questionou-a sobre as alianças de casamento, que ela não usava, e sobre a data não específica do aniversário de casamento dos dois, o que deixou Wanda surpresa. Agnes ofereceu sua ajuda para a 'noite especial' de Wanda e Visão.",
+			"caracteristics": {
+				"birth": "1674",
+				"weight": {
+					"value": 188,
+					"unity": "kg"
+				},
+				"height": {
+					"value": 1.92,
+					"unity": "meters"
+				},
+				"universe": "Terra 616"
+			},
+			"abilities": {
+				"force": 80,
+				"intelligence": 80,
+				"agility": 70,
+				"endurance": 55,
+				"velocity": 65
+			},
+			"movies": [
+				"series/wanda-vision.webp"
+			],
+			"type": "villain"
+		},
+		{
+			"id": "6",
+			"name": "Mandarin",
+			"alterEgo": "Xu Wenwu",
+			"imagePath": "chars/wenwu.webp",
+			"biography": "Xu Wenwu (Mandarim: 徐文武) foi uma figura lendária e quase mítica que subiu ao poder após descobrir um conjunto de anéis míticos e fundou o exército conhecido como os Dez Anéis. Wenwu se estabeleceu como um poderoso senhor da guerra que conquistou reinos ao longo dos milênios, e o poder dos anéis lhe conferiu a imortalidade. Nos dias modernos, Wenwu continuou buscando o poder, encontrando a antiga cidade de Ta Lo. Ele se apaixonou pelo porteiro de Ta Lo, Ying Li, e foi pai de Xu Shang-Chi e Xu Xialing. Apesar de renunciar à violência para criar sua família, Wenwu finalmente recuperou seus anéis quando Ying Li foi assassinado pelas mãos da Gangue de Ferro. Ele treinou Shang-Chi para ser um assassino para vingar o assassinato de sua esposa. No entanto, os dois filhos de Wenwu ficariam com medo do pai e eventualmente o abandonariam.",
+			"caracteristics": {
+				"birth": "1000",
+				"weight": {
+					"value": 174,
+					"unity": "kg"
+				},
+				"height": {
+					"value": 1.93,
+					"unity": "meters"
+				},
+				"universe": "Terra 616"
+			},
+			"abilities": {
+				"force": 90,
+				"intelligence": 90,
+				"agility": 80,
+				"endurance": 75,
+				"velocity": 80
+			},
+			"movies": [
+				"movies/shang-chi.jpeg"
+			],
+			"type": "villain"
+		}
+	],
+	"anti-heroes": [
+		{
+			"id": "7",
+			"name": "Deadpool",
+			"alterEgo": "Wade Wilson",
+			"imagePath": "chars/deadpool.png",
+			"biography": "O jovem Wade saiu do controle quando sua mãe morreu de câncer quando ele tinha 6 anos de idade, tornando-o um garoto solitário e atormentado, sem nenhuma explicação. Seu pai – que era um bêbado do exército – o espancava e o tratava mal. Assim, com uma vida desestruturada, Wade tornou-se um delinquente na adolescência. Um dia chegou a agredir friamente seu pai com uma garrafa mostrando alguns traços de insanidade, matando-o no processo. Depois disso, Wade iniciou sua carreira de mercenário. Ele aceitava assassinar apenas aqueles merecedores da morte.",
+			"caracteristics": {
+				"birth": "1991",
+				"weight": {
+					"value": 95,
+					"unity": "kg"
+				},
+				"height": {
+					"value": 1.88,
+					"unity": "meters"
+				},
+				"universe": "Terra 616"
+			},
+			"abilities": {
+				"force": 80,
+				"intelligence": 60,
+				"agility": 85,
+				"endurance": 90,
+				"velocity": 70
+			},
+			"movies": [
+				"movies/deadpool-1.jpg",
+				"movies/deadpool-2.jpg"
+			],
+			"type": "anti-hero"
+		},
+		{
+			"id": "8",
+			"name": "Loki",
+			"alterEgo": "",
+			"imagePath": "chars/loki.jpeg",
+			"biography": "Loki Laufeyson era o filho biológico do rei Laufey, o soberano dos Gigantes de Gelo em Jotunheim. Pouco depois de seu nascimento, Loki foi abandonado e deixado para morrer. Encontrado pelo rei Odin, ele foi levado para Asgard e criado por Odin e sua esposa, Frigga, como um príncipe asgardiano, junto com seu filho biológico Thor. Quando cresceu, Loki ficou conhecido como o 'Deus da Trapaça'. Quando Thor seria coroado rei, Loki sabotou a cerimônia ao deixar os Gigantes de Gelo atacarem Asgard, levando Thor a buscar vingança em Jotunheim, o que resultou no banimento de Thor para a Terra e em Loki descobrir a verdade sobre sua origem. Frigga deu o trono a Loki quando Odin caiu no Sono de Odin, mas quando os Três Guerreiros e Sif tentaram trazer Thor de volta, Loki foi forçado a tentar impedi-los. Apesar disso, Thor voltou de seu exílio e acabou com o reinado de Loki. Com Odin desaprovando suas ações, Loki permitiu-se cair no profundo abismo do espaço, entrando em um buraco de minhoca criado pela súbita destruição da Ponte Bifrost.",
+			"caracteristics": {
+				"birth": "300",
+				"weight": {
+					"value": 104,
+					"unity": "kg"
+				},
+				"height": {
+					"value": 1.92,
+					"unity": "meters"
+				},
+				"universe": "Terra 616"
+			},
+			"abilities": {
+				"force": 90,
+				"intelligence": 90,
+				"agility": 75,
+				"endurance": 70,
+				"velocity": 75
+			},
+			"movies": [
+				"movies/thor-1.jpg",
+				"movies/avengers-1.jpg",
+				"movies/thor-2.jpg",
+				"movies/thor-3.jpg",
+				"movies/avengers-3.jpg",
+				"series/loki-1.jpeg",
+				"series/loki-2.jpeg"
+			],
+			"type": "anti-hero"
+		},
+		{
+			"id": "9",
+			"name": "Feiticeira Escarlate",
+			"alterEgo": "Wanda Maximoff",
+			"imagePath": "chars/wanda.webp",
+			"biography": "Wanda Maximoff é uma sokoviana, irmã gêmea de Pietro Maximoff, uma vingadora e a Feiticeira Escarlate. Wanda obteve seus poderes psiônicos através dos experimentos com a Joia da Mente, da qual ela foi voluntária. Após isso, ela confrontou os Vingadores junto com seu irmão e Ultron, onde no final, eles se rebelaram contra Ultron após descobrir seus verdadeiros planos e foram para o lado dos vingadores. A batalha em Sokovia resultou na morte de Pietro, o que deixou Wanda abalada, mas foi apoiada pelos vingadores, principalmente por Visão. Após a Saga do Infinito, Wanda foi recomeçar a vida, casada com Visão e morando na cidade de Westview, onde tiveram seus filhos, enfrentaram novos desafios, inimigos e foi onde Wanda descobriu mais sobre seu passado e poderes. Ao se tornar a Feiticeira Escarlate, ela estudou o Darkhold a ponto de entender melhor seus poderes e usa-los para conseguir encontrar uma forma de viajar para outros mundos afim de encontrar os seus 'filhos'.",
+			"caracteristics": {
+				"birth": "1989",
+				"weight": {
+					"value": 95,
+					"unity": "kg"
+				},
+				"height": {
+					"value": 1.87,
+					"unity": "meters"
+				},
+				"universe": "Terra 616"
+			},
+			"abilities": {
+				"force": 90,
+				"intelligence": 85,
+				"agility": 80,
+				"endurance": 60,
+				"velocity": 65
+			},
+			"movies": [
+				"movies/captain-america-2.jpg",
+				"movies/avengers-2.jpg",
+				"movies/captain-america-3.jpg",
+				"movies/avengers-3.jpg",
+				"movies/avengers-4.jpg",
+				"series/wanda-vision.webp",
+				"movies/doctor-strange-2.jpeg"
+			],
+			"type": "anti-hero"
+		}
+	],
+	"aliens": [
+		{
+			"id": "10",
+			"name": "Gorr",
+			"alterEgo": "",
+			"imagePath": "chars/gorr.webp",
+			"biography": "Gorr era um assassino galáctico vingativo que buscava a extinção de todos os deuses, sendo intitulado como o Açougueiro de Deuses. Outrora um homem devoto e pacífico, Gorr perdeu a fé após a morte de sua filha. Enfurecido com a forma como os deuses menosprezaram seu sofrimento, Gorr encontrou o All-Black, o Necrosword. Com sua vida entrelaçada com a lâmina, Gorr embarcou em uma campanha de massacre contra os deuses, enquanto buscava a Eternidade para realizar seu desejo de provocar a extinção deles. Exigindo que a Ponte Bifrost abrisse os Portões da Eternidade, Gorr sequestrou os filhos de Nova Asgard para atrair Thor até ele, com a intenção de roubar o Stormbreaker, que poderia convocar o Bifrost. Confrontado no Reino das Sombras, Gorr pegou Stormbreaker, prosseguindo em busca da Eternidade, onde foi confrontado novamente por Thor e o Poderoso Thor, que destruiu a Necrosword. Conseguindo alcançar a Eternidade, o moribundo Gorr foi convencido por Thor a usar seu desejo para trazer de volta sua filha, a quem Gorr a confiou a Thor, morrendo como um homem contente.",
+			"caracteristics": {
+				"birth": "0",
+				"weight": {
+					"value": 447,
+					"unity": "kg"
+				},
+				"height": {
+					"value": 2.15,
+					"unity": "meters"
+				},
+				"universe": "Terra 616"
+			},
+			"abilities": {
+				"force": 90,
+				"intelligence": 85,
+				"agility": 75,
+				"endurance": 75,
+				"velocity": 85
+			},
+			"movies": [
+				"movies/thor-4.jpeg"
+			],
+			"type": "alien"
+		},
+		{
+			"id": "11",
+			"name": "Korg",
+			"alterEgo": "Kronan",
+			"imagePath": "chars/korg.webp",
+			"biography": "Korg é um guerreiro Kronan que chegou em Sakaar e foi forçado a participar do Torneio de Campeões do Grão-Mestre. Ao conhecer Thor, Korg ajudou ele e Bruce Banner a escaparem de Sakaar com a ajuda de Valquíria e Loki. Após a derrota de Hela, Korg e Miek se juntaram aos Asgardianos em sua jornada em direção à Terra seguindo o Ragnarök. Após o estalo, Korg foi um dos sobreviventes, passando a morar em Nova Asgard com Miek e o resto dos sobreviventes asgardianos, fazendo companhia a Thor enquanto ele se transformava em um bêbado por seu fracasso em impedir Thanos. Durante a Batalha da Terra, Korg se juntou à batalha para derrotar uma versão alternativa de Thanos, antes de voltar para Nova Asgard sob o novo governo de Valquíria.",
+			"caracteristics": {
+				"birth": "0",
+				"weight": {
+					"value": 85,
+					"unity": "kg"
+				},
+				"height": {
+					"value": 1.90,
+					"unity": "meters"
+				},
+				"universe": "Terra 616"
+			},
+			"abilities": {
+				"force": 80,
+				"intelligence": 65,
+				"agility": 60,
+				"endurance": 85,
+				"velocity": 60
+			},
+			"movies": [
+				"movies/thor-3.jpg",
+				"movies/avengers-4.jpg",
+				"movies/thor-4.jpeg"
+			],
+			"type": "alien"
+		},
+		{
+			"id": "12",
+			"name": "Kraglin",
+			"alterEgo": "",
+			"imagePath": "chars/kraglin.webp",
+			"biography": "Kraglin Obfonteri é um ex-saqueador que serviu como imediato no Clã de Yondu. Ele permaneceu leal a Yondu Udonta durante a caça ao Senhor das Estrelas e se juntou a Udonta e aos Guardiões da Galáxia lutando contra Ronan, o Acusador, na Batalha de Xandar.",
+			"caracteristics": {
+				"birth": "0",
+				"weight": {
+					"value": 298,
+					"unity": "kg"
+				},
+				"height": {
+					"value": 1.93,
+					"unity": "meters"
+				},
+				"universe": "Terra 616"
+			},
+			"abilities": {
+				"force": 75,
+				"intelligence": 70,
+				"agility": 70,
+				"endurance": 50,
+				"velocity": 70
+			},
+			"movies": [
+				"movies/guardians-of-the-galaxy-1.jpg",
+				"movies/guardians-of-the-galaxy-2.jpg",
+				"movies/avengers-4.jpg",
+				"movies/thor-4.jpeg",
+				"movies/guardians-of-the-galaxy-3.jpeg"
+			],
+			"type": "alien"
+		}
+	],
+	"home-characters": {
+		"heroes": [
+			{
+				"id": "1",
+				"name": "Homem Aranha",
+				"alterEgo": "Peter Parker",
+				"imagePath": "chars/spider-man.jpeg",
+				"type": "hero"
+			},
+			{
+				"id": "2",
+				"name": "Capitão América",
+				"alterEgo": "Sam Wilson",
+				"imagePath": "chars/captain-america.jpeg",
+				"biography": "Samuel Thomas Wilson, é um ex aviador do Exército, que largou sua carreira após a morte de Riley, seu amigo de longa data. Após sua saída, passou a trabalhar com ex militares que sofriam de estresse pós traumático. Conheceu Steve Rogers em uma corrida matinal, e logo se tornaram amigos, pois Rogers precisava de alguém que não pertencesse a SHIELD, pois haviam infiltrados da HYDRA, ali dentro. Em O Falcão e O Soldado Invernal, Bucky e Sam tem que trabalhar juntos para impedir os Apátridas de matarem pessoas do governo. Inicialmente o escudo é entregue a John Walker, que por um breve tempo é chamado de Capitão América. Após a morte de um Apátrida em praça pública, Walker é destituído do cargo de Capitão América; com isso Wilson toma posse do escudo e do título de Capitão América.",
+				"type": "hero"
+			},
+			{
+				"id": "3",
+				"name": "Doutor Estranho",
+				"alterEgo": "Steven Strange",
+				"imagePath": "chars/doctor-strange.jpg",
+				"type": "hero"
+			}
+		],
+		"villains": [
+			{
+				"id": "4",
+				"name": "Rei do crime",
+				"alterEgo": "Wilson Fisk",
+				"imagePath": "chars/king-pin.jpeg",
+				"type": "villain"
+			},
+			{
+				"id": "5",
+				"name": "Agatha Harkness",
+				"alterEgo": "Agnes",
+				"imagePath": "chars/agatha-harkness.jpeg",
+				"type": "villain"
+			},
+			{
+				"id": "6",
+				"name": "Mandarin",
+				"alterEgo": "Xu Wenwu",
+				"imagePath": "chars/wenwu.webp",
+				"type": "villain"
+			}
+		],
+		"anti-heroes": [
+			{
+				"id": "7",
+				"name": "Deadpool",
+				"alterEgo": "Wade Wilson",
+				"imagePath": "chars/deadpool.png",
+				"type": "anti-hero"
+			},
+			{
+				"id": "8",
+				"name": "Loki",
+				"alterEgo": "",
+				"imagePath": "chars/loki.jpeg",
+				"type": "anti-hero"
+			},
+			{
+				"id": "9",
+				"name": "Feiticeira Escarlate",
+				"alterEgo": "Wanda Maximoff",
+				"imagePath": "chars/wanda.webp",
+				"type": "anti-hero"
+			}
+		],
+		"aliens": [
+			{
+				"id": "10",
+				"name": "Gorr",
+				"alterEgo": "",
+				"imagePath": "chars/gorr.webp",
+				"type": "alien"
+			},
+			{
+				"id": "11",
+				"name": "Korg",
+				"alterEgo": "Kronan",
+				"imagePath": "chars/korg.webp",
+				"type": "alien"
+			},
+			{
+				"id": "12",
+				"name": "Kraglin",
+				"alterEgo": "",
+				"imagePath": "chars/kraglin.webp",
+				"type": "alien"
+			}
+		],
+		"humans": [
+			{
+				"id": "13",
+				"name": "Howard Stark",
+				"alterEgo": "Homem de Ferro",
+				"imagePath": "chars/howard-stark.png",
+				"type": "human"
+			},
+			{
+				"id": "14",
+				"name": "Mary Jane",
+				"alterEgo": "Homem Aranha",
+				"imagePath": "chars/mary-jane.png",
+				"type": "human"
+			},
+			{
+				"id": "15",
+				"name": "Happy Hogan",
+				"alterEgo": "Homem de Ferro",
+				"imagePath": "chars/happy-hogan.png",
+				"type": "human"
+			}
+		]
+	}
+}
