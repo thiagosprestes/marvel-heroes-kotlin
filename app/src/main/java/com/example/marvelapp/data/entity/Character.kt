@@ -7,7 +7,7 @@ enum class CharacterType {
     HERO,
     @SerializedName("villain")
     VILLAIN,
-    @SerializedName("antihero")
+    @SerializedName("anti-hero")
     ANTIHERO,
     @SerializedName("alien")
     ALIEN,

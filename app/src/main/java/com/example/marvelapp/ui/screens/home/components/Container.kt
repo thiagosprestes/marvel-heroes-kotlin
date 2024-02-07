@@ -104,10 +104,26 @@ fun Content(
             title = "Hérois",
             navHostController = navController!!
         )
-//        CharactersSection(characters = response.villains, title = "Vilões")
-//        CharactersSection(characters = response.antiheroes, title = "anti-hérois")
-//        CharactersSection(characters = response.aliens, title = "Alienígenas")
-//        CharactersSection(characters = response.humans, title = "Humanos")
+        CharactersSection(
+            characters = response.villains,
+            title = "Vilões",
+            navHostController = navController
+        )
+        CharactersSection(
+            characters = response.antiheroes,
+            title = "Anti-heróis",
+            navHostController = navController
+        )
+        CharactersSection(
+            characters = response.aliens,
+            title = "Alienígenas",
+            navHostController = navController
+        )
+        CharactersSection(
+            characters = response.humans,
+            title = "Humanos",
+            navHostController = navController
+        )
     }
 }
 

@@ -14,8 +14,6 @@ import com.example.marvelapp.ui.viewmodel.CharacterViewModel
 
 @Composable
 fun CharacterScreen(
-    id: String,
-    type: String,
     characterViewModel: CharacterViewModel = hiltViewModel()
 ) {
     val view = LocalView.current
@@ -25,11 +23,6 @@ fun CharacterScreen(
     WindowCompat.getInsetsController(window, view).isAppearanceLightStatusBars = false
 
     val character by characterViewModel.character.collectAsState()
-
-    characterViewModel.getCharacter(
-        id = id,
-        type = type
-    )
 
     Container(character = character)
 }

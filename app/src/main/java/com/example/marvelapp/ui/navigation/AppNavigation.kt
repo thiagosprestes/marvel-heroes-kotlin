@@ -15,11 +15,8 @@ fun AppNavigationGraph() {
         composable(Routes.HOME_SCREEN) {
             HomeScreen(navController = navController)
         }
-        composable(Routes.CHARACTER_SCREEN) { item ->
-            val id = item.arguments?.getString("id")
-            val type = item.arguments?.getString("type")
-
-            CharacterScreen(id = id!!, type = type!!)
+        composable(Routes.CHARACTER_SCREEN) {
+            CharacterScreen()
         }
     }
 }

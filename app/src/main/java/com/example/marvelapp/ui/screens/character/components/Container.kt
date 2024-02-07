@@ -23,12 +23,10 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
 import com.example.marvelapp.BuildConfig
-import com.example.marvelapp.R
 import com.example.marvelapp.ResourceState
 import com.example.marvelapp.data.entity.Abilities
 import com.example.marvelapp.data.entity.Character
@@ -77,6 +75,7 @@ fun Content(
     Column(
         modifier = Modifier
             .verticalScroll(rememberScrollState())
+            .background(PrimaryBlack)
     ) {
         Row(modifier = Modifier.height(812.dp)) {
             Box(
@@ -86,7 +85,6 @@ fun Content(
                 AsyncImage(
                     model = "${BuildConfig.BASE_URL}/${character.imagePath}",
                     contentDescription = null,
-                    placeholder = painterResource(id = R.drawable.ic_launcher_background),
                     modifier = Modifier.fillMaxSize(),
                     contentScale = ContentScale.Crop
                 )
@@ -104,12 +102,12 @@ fun Content(
                     modifier = Modifier.padding(24.dp)
                 ) {
                     TextComponent(
-                        text = character.name,
+                        text = character.alterEgo,
                         fontStyle = MaterialTheme.typography.headlineMedium,
                         color = PrimaryWhite
                     )
                     TextComponent(
-                        text = character.alterEgo,
+                        text = character.name,
                         fontStyle = MaterialTheme.typography.titleLarge,
                         color = PrimaryWhite,
                     )
@@ -126,6 +124,36 @@ fun Content(
                     )
                 }
             }
+        }
+        Column(
+            modifier = Modifier.padding(
+                start = 24.dp,
+                top = 8.dp,
+                end = 32.dp,
+                bottom = 48.dp
+            )
+        ) {
+            TextComponent(
+                text = "Habilidades",
+                fontStyle = MaterialTheme.typography.headlineLarge,
+                color = PrimaryWhite,
+            )
+            AbilityRow(label = "Força", level = character.abilities?.force!!)
+            AbilityRow(label = "Inteligência", level = character.abilities.intelligence)
+            AbilityRow(label = "Agilidade", level = character.abilities.agility)
+            AbilityRow(label = "Resistência", level = character.abilities.endurance)
+            AbilityRow(label = "Velocidade", level = character.abilities.velocity)
+        }
+        Column(
+            modifier = Modifier.padding(start = 0.dp, top = 0.dp, end = 0.dp, bottom = 48.dp)
+        ) {
+            TextComponent(
+                text = "Filmes",
+                fontStyle = MaterialTheme.typography.headlineLarge,
+                color = PrimaryWhite,
+                modifier = Modifier.padding(horizontal = 24.dp)
+            )
+            MoviesRow(movies = character.movies!!)
         }
     }
     Box {
@@ -147,7 +175,7 @@ fun ContentPreview() {
             imagePath = "chars/spider-man.png",
             id = "12345",
             type = CharacterType.HERO,
-            movies = arrayOf(""),
+            movies = arrayOf("1", "2"),
             abilities = Abilities(
                 force = 70,
                 intelligence = 65,
