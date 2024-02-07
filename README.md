@@ -24,11 +24,15 @@ Marvel Heroes App
 
 ## 🎨 Telas
 
-<img src=".github/home.png" alt="marvel-heroes-app" width-="500" height="500">
-<img src=".github/home-slide.png" alt="marvel-heroes-app" width-="500" height="500">
-<img src=".github/character.png" alt="marvel-heroes-app" width-="500" height="500">
-<img src=".github/character-abilities.png" alt="marvel-heroes-app" width-="500" height="500">
-<img src=".github/character-movies.png" alt="marvel-heroes-app" width-="500" height="500">
+
+
+**<p float="left">
+<img src=".github/home.png" alt="marvel-heroes-app" width-="400" height="400">
+<img src=".github/home-slide.png" alt="marvel-heroes-app" width-="400" height="400">
+<img src=".github/character.png" alt="marvel-heroes-app" width-="400" height="400">
+<img src=".github/character-abilities.png" alt="marvel-heroes-app" width-="400" height="400">
+<img src=".github/character-movies.png" alt="marvel-heroes-app" width-="400" height="400">
+</p>**
 
 ## 📃 Sobre o projeto
 
