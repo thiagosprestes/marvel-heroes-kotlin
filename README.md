@@ -24,19 +24,17 @@ Marvel Heroes App
 
 ## 🎨 Telas
 
-
-
-**<p float="left">
+<p float="left">
 <img src=".github/home.png" alt="marvel-heroes-app" width-="400" height="400">
 <img src=".github/home-slide.png" alt="marvel-heroes-app" width-="400" height="400">
 <img src=".github/character.png" alt="marvel-heroes-app" width-="400" height="400">
 <img src=".github/character-abilities.png" alt="marvel-heroes-app" width-="400" height="400">
 <img src=".github/character-movies.png" alt="marvel-heroes-app" width-="400" height="400">
-</p>**
+</p>
 
 ## 📃 Sobre o projeto
 
-Aplicativo proposto como desafio pela <bold>umpontoseis</bold> no site de desafios <bold>DevChallenge</bold> onde objetivo é desenvolver um app que liste alguns personagens da Marvel e suas caracteristicas, tudo isso seguindo o design proposto proposto e utilizando os dados fornecidos.
+Aplicativo proposto como desafio pela <bold>umpontoseis</bold> no site de desafios <bold>DevChallenge</bold> onde objetivo é desenvolver um app que liste alguns personagens da Marvel e suas caracteristicas, tudo isso seguindo o design proposto e utilizando os dados fornecidos.
 
 A proposta do projeto surgiu em 2020 onde fiz o app em <a href="https://github.com/thiagosprestes/marvel-heroes-app">React Native</a>, agora em 2024 estou refazendo o mesmo, porém em Kotlin!
 
