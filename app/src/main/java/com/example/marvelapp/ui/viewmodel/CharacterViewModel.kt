@@ -4,8 +4,7 @@ import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.marvelapp.ResourceState
-import com.example.marvelapp.data.entity.Character
-import com.example.marvelapp.data.entity.CharacterType
+import com.example.marvelapp.data.model.character.Character
 import com.example.marvelapp.ui.repository.CharactersRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers

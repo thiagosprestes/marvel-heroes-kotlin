@@ -1,5 +1,6 @@
-package com.example.marvelapp.data.entity
+package com.example.marvelapp.data.model.response
 
+import com.example.marvelapp.data.model.character.Character
 import com.google.gson.annotations.SerializedName
 
 data class CharactersResponse(

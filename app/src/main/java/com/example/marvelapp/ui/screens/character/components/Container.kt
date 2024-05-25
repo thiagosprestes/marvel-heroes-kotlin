@@ -1,6 +1,5 @@
 package com.example.marvelapp.ui.screens.character.components
 
-import android.icu.util.Calendar
 import android.util.Log
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
@@ -31,12 +30,12 @@ import coil.compose.AsyncImage
 import coil.request.ImageRequest
 import com.example.marvelapp.BuildConfig
 import com.example.marvelapp.ResourceState
-import com.example.marvelapp.data.entity.Abilities
-import com.example.marvelapp.data.entity.Character
-import com.example.marvelapp.data.entity.CharacterType
-import com.example.marvelapp.data.entity.Characteristics
-import com.example.marvelapp.data.entity.Height
-import com.example.marvelapp.data.entity.Weight
+import com.example.marvelapp.data.model.character.Abilities
+import com.example.marvelapp.data.model.character.Character
+import com.example.marvelapp.data.model.character.CharacterType
+import com.example.marvelapp.data.model.character.Characteristics
+import com.example.marvelapp.data.model.character.Height
+import com.example.marvelapp.data.model.character.Weight
 import com.example.marvelapp.ui.components.Loader
 import com.example.marvelapp.ui.components.TextComponent
 import com.example.marvelapp.ui.screens.home.TAG

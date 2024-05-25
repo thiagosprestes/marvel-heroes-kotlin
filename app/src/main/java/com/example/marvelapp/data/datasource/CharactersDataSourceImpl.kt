@@ -1,9 +1,9 @@
 package com.example.marvelapp.data.datasource
 
 import com.example.marvelapp.data.api.ApiService
-import com.example.marvelapp.data.entity.Character
-import com.example.marvelapp.data.entity.CharacterType
-import com.example.marvelapp.data.entity.CharactersResponse
+import com.example.marvelapp.data.model.character.Character
+import com.example.marvelapp.data.model.character.CharacterType
+import com.example.marvelapp.data.model.response.CharactersResponse
 import retrofit2.Response
 import javax.inject.Inject
 

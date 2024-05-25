@@ -18,9 +18,9 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.example.marvelapp.R
 import com.example.marvelapp.ResourceState
-import com.example.marvelapp.data.entity.Character
-import com.example.marvelapp.data.entity.CharacterType
-import com.example.marvelapp.data.entity.CharactersResponse
+import com.example.marvelapp.data.model.character.Character
+import com.example.marvelapp.data.model.character.CharacterType
+import com.example.marvelapp.data.model.response.CharactersResponse
 import com.example.marvelapp.ui.components.Loader
 import com.example.marvelapp.ui.components.TextComponent
 import com.example.marvelapp.ui.screens.home.TAG

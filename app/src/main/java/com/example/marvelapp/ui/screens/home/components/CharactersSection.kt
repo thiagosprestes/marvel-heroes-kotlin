@@ -30,7 +30,7 @@ import androidx.navigation.NavController
 import coil.compose.AsyncImage
 import coil.request.ImageRequest
 import com.example.marvelapp.BuildConfig
-import com.example.marvelapp.data.entity.Character
+import com.example.marvelapp.data.model.character.Character
 import com.example.marvelapp.ui.components.TextComponent
 import com.example.marvelapp.ui.theme.PrimaryBlack
 import com.example.marvelapp.ui.theme.PrimaryGrey

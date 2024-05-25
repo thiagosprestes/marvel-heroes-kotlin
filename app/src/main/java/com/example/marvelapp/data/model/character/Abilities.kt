@@ -1,4 +1,4 @@
-package com.example.marvelapp.data.entity
+package com.example.marvelapp.data.model.character
 
 data class Abilities(
     val force: Int,

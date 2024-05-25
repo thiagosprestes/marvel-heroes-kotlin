@@ -3,7 +3,7 @@ package com.example.marvelapp.ui.viewmodel
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.marvelapp.ResourceState
-import com.example.marvelapp.data.entity.CharactersResponse
+import com.example.marvelapp.data.model.response.CharactersResponse
 import com.example.marvelapp.ui.repository.CharactersRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers

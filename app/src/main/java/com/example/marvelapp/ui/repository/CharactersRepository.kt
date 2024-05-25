@@ -2,9 +2,8 @@ package com.example.marvelapp.ui.repository
 
 import com.example.marvelapp.ResourceState
 import com.example.marvelapp.data.datasource.CharactersDataSource
-import com.example.marvelapp.data.entity.Character
-import com.example.marvelapp.data.entity.CharacterType
-import com.example.marvelapp.data.entity.CharactersResponse
+import com.example.marvelapp.data.model.character.Character
+import com.example.marvelapp.data.model.response.CharactersResponse
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.flow

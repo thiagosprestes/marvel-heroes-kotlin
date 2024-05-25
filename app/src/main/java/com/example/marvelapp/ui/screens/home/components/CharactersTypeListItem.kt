@@ -14,7 +14,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.marvelapp.R
-import com.example.marvelapp.data.entity.CharacterType
+import com.example.marvelapp.data.model.character.CharacterType
 import com.example.marvelapp.ui.theme.gradientBlue
 import com.example.marvelapp.ui.theme.gradientGreen
 import com.example.marvelapp.ui.theme.gradientPink
