@@ -29,41 +29,22 @@ import androidx.navigation.NavController
 import coil.compose.AsyncImage
 import coil.request.ImageRequest
 import com.example.marvelapp.BuildConfig
-import com.example.marvelapp.ResourceState
-import com.example.marvelapp.data.model.character.Abilities
-import com.example.marvelapp.data.model.character.Character
-import com.example.marvelapp.data.model.character.CharacterType
-import com.example.marvelapp.data.model.character.Characteristics
-import com.example.marvelapp.data.model.character.Height
-import com.example.marvelapp.data.model.character.Weight
-import com.example.marvelapp.ui.components.Loader
-import com.example.marvelapp.ui.components.TextComponent
-import com.example.marvelapp.ui.screens.home.TAG
-import com.example.marvelapp.ui.theme.PrimaryBlack
-import com.example.marvelapp.ui.theme.PrimaryDark
-import com.example.marvelapp.ui.theme.PrimaryWhite
+import com.example.marvelapp.core.data.model.character.Abilities
+import com.example.marvelapp.core.data.model.character.Character
+import com.example.marvelapp.core.data.model.character.CharacterType
+import com.example.marvelapp.core.data.model.character.Characteristics
+import com.example.marvelapp.core.data.model.character.Height
+import com.example.marvelapp.core.data.model.character.Weight
+import com.example.marvelapp.core.data.utils.RequestState
+import com.example.marvelapp.core.presentation.TextComponent
+import com.example.marvelapp.core.presentation.theme.PrimaryBlack
+import com.example.marvelapp.core.presentation.theme.PrimaryDark
+import com.example.marvelapp.core.presentation.theme.PrimaryWhite
 
 @Composable
-fun Container(character: ResourceState<Character>, navController: NavController) {
+fun Container(character: RequestState<Character>, navController: NavController) {
     Surface(modifier = Modifier.background(PrimaryDark)) {
-        when (character) {
-            is ResourceState.Loading -> {
-                Log.d(TAG, "Loading")
-                Loader()
-            }
 
-            is ResourceState.Success -> {
-                val response = character.data
-                Log.d(TAG, "Success ${response.name}")
-                Content(character = character.data, navController=navController)
-            }
-
-            is ResourceState.Error -> {
-                Log.d(
-                    TAG, "Error $character"
-                )
-            }
-        }
     }
 }
 

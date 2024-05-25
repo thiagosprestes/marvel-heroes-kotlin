@@ -10,12 +10,12 @@ import androidx.compose.ui.platform.LocalView
 import androidx.core.view.WindowCompat
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
+import com.example.marvelapp.features.home.presentation.HomeViewModel
 import com.example.marvelapp.ui.screens.character.components.Container
-import com.example.marvelapp.ui.viewmodel.CharacterViewModel
 
 @Composable
 fun CharacterScreen(
-    characterViewModel: CharacterViewModel = hiltViewModel(),
+    characterViewModel: HomeViewModel = hiltViewModel(),
     navController: NavController
 ) {
     val view = LocalView.current
@@ -24,7 +24,7 @@ fun CharacterScreen(
     window.statusBarColor = Color.Black.toArgb()
     WindowCompat.getInsetsController(window, view).isAppearanceLightStatusBars = false
 
-    val character by characterViewModel.character.collectAsState()
+//    val character by characterViewModel.character.collectAsState()
 
-    Container(character = character, navController = navController)
+//    Container(character = {}, navController = navController)
 }

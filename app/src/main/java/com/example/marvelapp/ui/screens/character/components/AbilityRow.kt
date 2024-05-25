@@ -14,9 +14,9 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
-import com.example.marvelapp.ui.components.TextComponent
-import com.example.marvelapp.ui.theme.PrimaryDark
-import com.example.marvelapp.ui.theme.PrimaryWhite
+import com.example.marvelapp.core.presentation.TextComponent
+import com.example.marvelapp.core.presentation.theme.PrimaryDark
+import com.example.marvelapp.core.presentation.theme.PrimaryWhite
 
 @Composable
 fun AbilityRow(
