@@ -1,4 +1,4 @@
-package com.example.marvelapp.ui.screens.character.components
+package com.example.marvelapp.features.character.presentation.components
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement

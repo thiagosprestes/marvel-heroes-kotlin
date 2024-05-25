@@ -4,7 +4,7 @@ import com.example.marvelapp.core.data.model.character.Character
 import com.example.marvelapp.core.data.utils.RequestState
 import com.example.marvelapp.features.home.data.mapper.toHomeCharacter
 import com.example.marvelapp.features.home.data.model.HomeCharacter
-import com.example.marvelapp.features.home.domain.repository.CharactersRepository
+import com.example.marvelapp.features.home.domain.repository.HomeRepository
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import javax.inject.Inject
@@ -17,7 +17,7 @@ interface GetCharactersUseCase {
 }
 
 class GetCharactersUseCaseImpl @Inject constructor(
-    private val repository: CharactersRepository
+    private val repository: HomeRepository
 ) : GetCharactersUseCase {
 
     override fun mappingCharacters(characters: List<Character>): List<HomeCharacter> =

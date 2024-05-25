@@ -1,9 +1,10 @@
-package com.example.marvelapp.features.home.data.datasource
+package com.example.marvelapp.core.data.datasource
 
 import com.example.marvelapp.core.data.api.CharacterService
 import com.example.marvelapp.core.data.model.character.Character
+import com.example.marvelapp.core.data.model.character.CharacterType
 import com.example.marvelapp.core.data.model.response.CharactersResponse
-import com.example.marvelapp.features.home.domain.datasource.CharactersDataSource
+import com.example.marvelapp.core.domain.datasource.CharactersDataSource
 import retrofit2.Response
 import javax.inject.Inject
 

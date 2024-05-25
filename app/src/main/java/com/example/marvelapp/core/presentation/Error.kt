@@ -20,7 +20,7 @@ import com.example.marvelapp.core.presentation.theme.PrimaryRed
 import com.example.marvelapp.core.presentation.theme.PrimaryWhite
 
 @Composable
-fun Error(onRetry: () -> Unit) {
+fun ErrorComposable(onRetry: () -> Unit) {
     Column(
         Modifier
             .fillMaxSize()
@@ -53,5 +53,5 @@ fun Error(onRetry: () -> Unit) {
 @Preview
 @Composable
 private fun ErrorPreview() {
-    Error(onRetry = {})
+    ErrorComposable(onRetry = {})
 }

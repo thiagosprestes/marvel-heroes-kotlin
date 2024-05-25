@@ -1,4 +1,4 @@
-package com.example.marvelapp.ui.screens.character.components
+package com.example.marvelapp.features.character.presentation.components
 
 import android.icu.util.Calendar
 import androidx.compose.foundation.Image

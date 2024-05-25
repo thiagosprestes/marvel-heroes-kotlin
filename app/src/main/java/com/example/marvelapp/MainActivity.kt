@@ -1,4 +1,4 @@
-package com.example.marvelapp.ui
+package com.example.marvelapp
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity

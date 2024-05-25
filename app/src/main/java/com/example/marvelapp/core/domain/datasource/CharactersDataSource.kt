@@ -1,6 +1,7 @@
-package com.example.marvelapp.features.home.domain.datasource
+package com.example.marvelapp.core.domain.datasource
 
 import com.example.marvelapp.core.data.model.character.Character
+import com.example.marvelapp.core.data.model.character.CharacterType
 import com.example.marvelapp.core.data.model.response.CharactersResponse
 
 interface CharactersDataSource {
